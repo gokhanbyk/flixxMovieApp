@@ -508,7 +508,7 @@ function init() {
   switch (global.currentPage) {
     case "/":
     case "/index.html":
-    case "https://gokhanbyk.github.io/flixxMovieApp/":
+    case "/flixxMovieApp/":
       displayPopularMovies();
       displayMovieSlider();
       break;
