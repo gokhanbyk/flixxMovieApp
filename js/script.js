@@ -1,5 +1,6 @@
 const global = {
   currentPage: window.location.pathname,
+  githubPage: window.location.href,
   search: {
     term: "",
     type: "",
@@ -508,7 +509,6 @@ function init() {
   switch (global.currentPage) {
     case "/":
     case "/index.html":
-    case "/flixxMovieApp/":
       displayPopularMovies();
       displayMovieSlider();
       break;
@@ -528,10 +528,27 @@ function init() {
       break;
   }
 
+  switch (global.githubPage) {
+    case "https://gokhanbyk.github.io/flixxMovieApp/":
+      displayPopularMovies();
+      displayMovieSlider();
+      break;
+    case "https:///gokhanbyk.github.io/shows.html":
+      displayPopularShows();
+      displayTvShowsSlider();
+      break;
+    case "https:///gokhanbyk.github.io//movie-details.html":
+      displayMovieDetails();
+      break;
+    case "https:///gokhanbyk.github.io//tv-details.html":
+      displayShowDetails();
+      break;
+    case "https:///gokhanbyk.github.io//search.html":
+      search();
+      break;
+  }
+
   highlightActiveLink();
 }
 
 document.addEventListener("DOMContentLoaded", init);
-console.log(window.location.pathname);
-console.log(window.location.hostname);
-console.log(window.location.href);
