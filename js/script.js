@@ -532,3 +532,6 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+console.log(window.location.pathname);
+console.log(window.location.hostname);
+console.log(window.location.href);
